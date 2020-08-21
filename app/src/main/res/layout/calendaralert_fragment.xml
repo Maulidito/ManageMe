@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="240dp"
+    android:layout_height="240dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/card"
+
+    android:backgroundTint="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="04 / 2020"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textSize="40sp"
+        android:textColor="@color/colorWhite"
+        android:id="@+id/tv_tgl" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center|bottom"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/tv_tgl"
+        android:id="@+id/ln_sp">
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/sp_bulan"
+            android:textAlignment="textEnd"
+            android:entries="@array/calendar_bulan"
+            />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_toRightOf="@+id/sp_bulan"
+            android:id="@+id/sp_tahun"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center|bottom"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/ln_sp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/list_selector"
+
+            android:text="Done"
+            android:textColor="@color/colorPrimary"
+            android:layout_weight="1"
+            android:id="@+id/btn_done"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button_danger"
+            android:text="CANCEL"
+
+            android:layout_weight="1"
+            android:id="@+id/btn_delete"/>
+</LinearLayout>
+</RelativeLayout>

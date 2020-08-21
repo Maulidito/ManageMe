@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/action_bar"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="35dp"
+    tools:context=".activity.AddActivity">
+
+    <RadioGroup
+        android:id="@+id/radio_group_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/btn_pemasukan"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/btn_pemasukan"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/radio_category_selector"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="Pemasukan"
+            android:textColor="@drawable/radio_category_selector" />
+
+        <RadioButton
+            android:id="@+id/btn_pengeluaran"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/radio_category_selector"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="Pengeluaran"
+            android:textColor="@drawable/radio_category_selector" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_group_category"
+        android:layout_marginVertical="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:background="@color/colorWhite"
+        android:src="@drawable/add_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_category" />
+
+
+    <RadioGroup
+        android:id="@+id/radio_detail_category1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1">
+
+
+        <RadioButton
+            android:id="@+id/btn_makanan"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/radio_group_category"
+            android:background="@drawable/radio_category_selector"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="Makanan"
+            android:textColor="@drawable/radio_category_selector" />
+
+        <RadioButton
+            android:id="@+id/btn_transportasi"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/radio_group_category"
+            android:layout_marginLeft="45dp"
+            android:layout_toRightOf="@+id/btn_makanan"
+            android:background="@drawable/radio_category_selector"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="Transportasi"
+            android:textColor="@drawable/radio_category_selector" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radio_detail_category2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_detail_category1"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_detail_category1">
+
+        <RadioButton
+            android:id="@+id/btn_belanja"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/btn_makanan"
+            android:background="@drawable/radio_category_selector"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="Belanja"
+            android:textColor="@drawable/radio_category_selector"
+
+            />
+
+        <RadioButton
+            android:id="@+id/btn_belajar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/btn_makanan"
+            android:layout_marginLeft="45dp"
+            android:layout_toRightOf="@+id/btn_makanan"
+            android:background="@drawable/radio_category_selector"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="Belajar"
+            android:textColor="@drawable/radio_category_selector" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_detail_category2"
+        android:layout_marginVertical="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:background="@color/colorWhite"
+        android:src="@drawable/add_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_detail_category2" />
+
+
+    <EditText
+        android:id="@+id/add_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_selesai"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:drawableBottom="@drawable/add_line"
+        android:gravity="center_horizontal"
+        android:hint="Harga"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+    <Button
+        android:id="@+id/btn_selesai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_selesai"
+        android:text="selesai"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_harga" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

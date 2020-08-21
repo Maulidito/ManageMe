@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".activity.HomeActivity">
+
+    <RadioGroup
+        android:id="@+id/rg_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar"
+        android:checkedButton="@id/rb_home"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:layout_weight="0"
+            android:background="@drawable/btn_home_selector"
+            android:button="@android:color/transparent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="MANAGE ME"
+            android:textColor="@color/colorWhite" />
+
+        <RadioButton
+            android:id="@+id/rb_history"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="@android:dimen/app_icon_size"
+            android:layout_weight="0"
+            android:background="@drawable/btn_history_selector"
+            android:button="@android:color/transparent" />
+    </RadioGroup>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/myFragment"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+
+
+</LinearLayout>
