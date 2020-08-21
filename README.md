@@ -6,3 +6,5 @@ Sebuah Aplikasi Android Sederhana yang berfungsi untuk menghitung pengeluaran da
 Fungsi Utama Manage Me:
 
 + Dapat Menghitung dan Mentracking Pengeluaran dan Pendapatan yang dilakukan oleh user
++ Dapat Menghitung Rata-Rata Perbulan atau pun Perhari Pengeluaran Dan Pemasukan
++ Melakukan Perhitungan Total Pemasukan dan Pengeluaran dengan Memilih Waktu yang ditentukan
